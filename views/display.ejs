@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching</title>
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&family=Philosopher:ital@1&display=swap"
+    rel="stylesheet">
+    <style>
+         body{
+        font-family: 'Philosopher', sans-serif;
+        width:100%;
+      }
+  h1{
+          text-align: center;
+      }
+      #center{
+        width:100%;
+        place-items: center;
+      }
+
+    </style>
+</head>
+<body>
+    <div id="center">
+    <h1>Nearest five vehicles!!! </h1>
+    <ol type="1">
+    <% for(var i=0;i<Near5.length;i++){ %>
+        <%obj=Near5[i] %>
+        <div>
+         <li>vehicleId: <%= obj.id %> .... Distance_from_Source:: <%= obj.Dist_frmSource%> .....
+            Co-ordinates: ( <%= obj.X %> , <%= obj.Y %> )</li>
+         </div>
+         <br>
+        <% } %> 
+    </ol>
+    </div>
+
+</body>
+</html>
