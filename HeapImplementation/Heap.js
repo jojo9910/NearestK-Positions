@@ -69,14 +69,6 @@ class PriorityQueue {
   }
 }
 
-// Pairwise comparison semantics
-// const pairwiseQueue = new PriorityQueue((a, b) => a[0] > b[0]);
-// pairwiseQueue.push(["low", 5], ["medium", 0], ["high", 10]);
-// console.log("\nContents:");
-// while (!pairwiseQueue.isEmpty()) {
-//   console.log(pairwiseQueue.pop()[0]); //=> 'high', 'medium', 'low'
-// }
-
 // const pairwiseQueue = new PriorityQueue((a, b) => a[0] > b[0]);
 
 module.exports = PriorityQueue;
