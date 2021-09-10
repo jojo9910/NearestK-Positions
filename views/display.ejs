@@ -24,10 +24,10 @@
 </head>
 <body>
     <div id="center">
-    <h1>Nearest five vehicles!!! </h1>
+    <h1>Nearest K-Vehicles!!! </h1>
     <ol type="1">
-    <% for(var i=0;i<Near5.length;i++){ %>
-        <%obj=Near5[i] %>
+    <% for(var i=0;i<NearK.length;i++){ %>
+        <%obj=NearK[i] %>
         <div>
          <li>vehicleId: <%= obj.id %> .... Distance_from_Source:: <%= obj.Dist_frmSource%> .....
             Co-ordinates: ( <%= obj.X %> , <%= obj.Y %> )</li>

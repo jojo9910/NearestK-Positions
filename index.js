@@ -21,9 +21,9 @@ app.get("/", (req, res) => {
 
 app.post("/fetchCabs",(req,res) =>{
  
-  let Near5 = [];
+  let NearK = [];
   console.log(req.body);
-  const {x_cor,y_cor}=req.body;
+  const {x_cor,y_cor,K_Value}=req.body;
 try{
   const pairwiseQueue = new PriorityQueue((a, b) => a[0] > b[0]);   
   for(var i=0;i<VehicleData.length;i++){
@@ -34,7 +34,7 @@ try{
 
      let dis=Math.sqrt((x-x_cor)*(x-x_cor)+(y-y_cor)*(y-y_cor));
     //  console.log(dis);
-     if(pairwiseQueue.size()<5){
+     if(pairwiseQueue.size()<K_Value){
        pairwiseQueue.push([dis,id]);
      }
      else if(pairwiseQueue.peek()[0]>dis){
@@ -48,10 +48,10 @@ try{
     const near=pairwiseQueue.pop();
     const cor = VehicleData[near[1]];
     console.log(cor.vehicleX," ",cor.vehicleY);
-    Near5.push({"id":near[1],"X":cor.vehicleX,"Y":cor.vehicleY,"Dist_frmSource":round(near[0])});
+    NearK.push({"id":near[1],"X":cor.vehicleX,"Y":cor.vehicleY,"Dist_frmSource":round(near[0])});
   }
-Near5.reverse();
-res.render('display',{Near5});
+NearK.reverse();
+res.render('display',{NearK});
 }catch(err){
   console.log(err);
   res.send("A error Here!!");
