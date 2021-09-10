@@ -1,4 +1,4 @@
-# Perfy_Task
+# NearestK-Positions
 
 Step 1. Install all dependencies
 
@@ -10,4 +10,4 @@ npm start
 
 #######################
 
-A simple Car Rental app that will tell nearest five cars to a given co-ordinates.
+A simple Car Rental app that will tell nearest K cars to a given co-ordinates.
