@@ -37,6 +37,9 @@ input:focus{
 	background-color: white;
 	border: 3px solid #2980b9;
 }
+#K_Value{
+  margin-left: 10%;
+}
     </style>
 
 </head>
@@ -48,15 +51,15 @@ input:focus{
   <form method="POST" action="/fetchCabs" role="form">
     <div>
 	<label for="x_cor"><strong>X_Co-ordinate:</strong></label>
-    <input type="number" name="x_cor" id="x-axis">
+    <input type="number" name="x_cor" id="x-axis" required>
 </div>  
 <div>
 <label for="y_cor"><strong>Y_Co-ordinate:</strong></label>
-<input type="number" name="y_cor" id="y-axis">
+<input type="number" name="y_cor" id="y-axis" required>
 </div>
 <div>
-  <label for="K_Value">K_Value:</label>
-  <input type="number" name="K_Value" id="K_Value">
+  <label for="K_Value"><strong>K__Value: </strong></label>
+  <input type="number" name="K_Value" id="K_Value" required>
   </div>
 <div>
 <button type="submit">click me!</button>
